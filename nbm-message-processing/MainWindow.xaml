@@ -8,8 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="10">
         <StackPanel>
-            <TextBox x:Name="MessageHeaderTextBox" Text="Message Header"/>
-            <TextBox x:Name="MessageTextTextBox" Text="Message Text" Margin="0,10,0,10"/>
+            <TextBlock Text="Message Header:" Margin="0,10,0,5"/>
+            <TextBox x:Name="MessageHeaderTextBox" Text="Enter a message header here"/>
+            
+            <TextBlock Text="Message Text:" Margin="0,10,0,5"/>
+            <TextBox x:Name="MessageTextTextBox" Text="Enter the message text here" Margin="0,10,0,10"/>
+            
+            <TextBlock Text="Message Output:" Margin="0,10,0,5"/>
+            <TextBox x:Name="MessageOutputTextBox" IsReadOnly="True" Margin="0,10,0,10" />
             
             <Button Content="Submit" Click="SubmitButton_Click"/>
             <Button Content="End Session" Click="EndSessionButton_Click" Margin="0,10,0,0"/>

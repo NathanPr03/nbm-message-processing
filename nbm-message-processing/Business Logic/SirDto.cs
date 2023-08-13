@@ -5,11 +5,11 @@ namespace nbm_message_processing.Business_Logic;
 public class SirDto
 {
     [JsonProperty]
-    private string Date { get; }
+    public string Date { get; private set; }
     [JsonProperty]
-    private string SortCode { get; }
+    public string SortCode { get; private set; }
     [JsonProperty]
-    private string IncidentNature { get; }
+    public string IncidentNature { get; private set; }
     
     public SirDto(string date, string sortCode, string incidentNature)
     {
