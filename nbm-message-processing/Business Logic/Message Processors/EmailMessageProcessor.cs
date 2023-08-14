@@ -9,7 +9,7 @@ public class EmailMessageProcessor: IMessageProcessor
 {
     private const string MessageType = "Email";
     
-    private readonly MessageSplitterService _messageSplitterService = new ();
+    private readonly MessageSplitterService _messageSplitterService;
     
     [JsonProperty] private readonly List<string> _quarantineList = new();
     [JsonProperty] private readonly List<SirDto> _sirList = new();
@@ -19,6 +19,16 @@ public class EmailMessageProcessor: IMessageProcessor
     [JsonProperty] private string _subject;
     [JsonProperty] private string _messageText;
 
+    public EmailMessageProcessor()
+    {
+        _messageSplitterService = new MessageSplitterService();
+    }
+
+    public EmailMessageProcessor(MessageSplitterService messageSplitterService)
+    {
+        _messageSplitterService = messageSplitterService;
+    }
+    
     public (string, string) Process(string header, string body)
     {
         _header = header;
