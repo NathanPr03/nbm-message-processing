@@ -65,4 +65,10 @@ public class MessageHandlerFacade
 
         return sortedHashtags;
     }
+
+    public void ConvertYmlToJson(string filePath)
+    {
+        var yml = new YmlToJsonService();
+        yml.WriteYmlToJson(filePath);
+    }
 }
