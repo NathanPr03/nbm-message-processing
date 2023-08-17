@@ -2,7 +2,7 @@ using System;
 
 namespace nbm_message_processing.Business_Logic.Message_Processors;
 
-public class MessageSplitterService
+public class MessageSplitterService: IMessageSplitterService
 {
     public string ExtractSender(string message)
     {

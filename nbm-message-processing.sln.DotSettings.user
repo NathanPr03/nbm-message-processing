@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9d120c24_002D7c87_002D46dd_002Db77b_002D5ffad31eb309/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="EmailMessageProcessorTests #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::BFFE5BCA-583F-4100-B633-06ABB0FDA884::net7.0-windows::nbm_message_processing_tests.TweetMessageProcessorTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::BFFE5BCA-583F-4100-B633-06ABB0FDA884::net7.0-windows::nbm_message_processing_tests.TextMessageProcessorTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

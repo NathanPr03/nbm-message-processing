@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace nbm_message_processing.Business_Logic;
+namespace nbm_message_processing.Business_Logic.Message_Processors;
 
-public class TextSpeakReplacer
+public class TextSpeakReplacer: ITextSpeakReplacer
 {
     private readonly Dictionary<string,string> _abbreviationDict = new ();
     

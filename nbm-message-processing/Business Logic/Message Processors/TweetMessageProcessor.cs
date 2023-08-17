@@ -9,8 +9,8 @@ public class TweetMessageProcessor : IMessageProcessor
 {
     private const string MessageType = "Tweet";
     
-    private readonly MessageSplitterService _messageSplitterService = new();
-    private readonly TextSpeakReplacer _textSpeakReplacer = new();
+    private readonly IMessageSplitterService _messageSplitterService;
+    private readonly ITextSpeakReplacer _textSpeakReplacer;
 
     [JsonProperty] private readonly Dictionary<string, int> _mentions = new(); // These two should be maps to preserve a count!!
     [JsonProperty] private readonly Dictionary<string, int> _hashtags = new();
@@ -18,7 +18,19 @@ public class TweetMessageProcessor : IMessageProcessor
     [JsonProperty] private string _header;
     [JsonProperty] private string _sender;
     [JsonProperty] private string _messageText;
+    
+    public TweetMessageProcessor()
+    {
+        _messageSplitterService = new MessageSplitterService();
+        _textSpeakReplacer = new TextSpeakReplacer();
+    }
 
+    public TweetMessageProcessor(IMessageSplitterService messageSplitterService, ITextSpeakReplacer textSpeakReplacer)
+    {
+        _messageSplitterService = messageSplitterService;
+        _textSpeakReplacer = textSpeakReplacer;
+    }
+    
     public (string, string) Process(string header, string body)
     {
         _header = header;

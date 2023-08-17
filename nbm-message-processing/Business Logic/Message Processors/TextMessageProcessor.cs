@@ -8,12 +8,24 @@ public class TextMessageProcessor: IMessageProcessor
 {
     private const string MessageType = "SMS";
     
-    private readonly MessageSplitterService _messageSplitterService = new ();
-    private readonly TextSpeakReplacer _textSpeakReplacer = new();
+    private readonly IMessageSplitterService _messageSplitterService;
+    private readonly ITextSpeakReplacer _textSpeakReplacer;
     
     [JsonProperty] private string _header;
     [JsonProperty] private string _sender;
     [JsonProperty] private string _messageText;
+    
+    public TextMessageProcessor()
+    {
+        _messageSplitterService = new MessageSplitterService();
+        _textSpeakReplacer = new TextSpeakReplacer();
+    }
+
+    public TextMessageProcessor(IMessageSplitterService messageSplitterService, ITextSpeakReplacer textSpeakReplacer)
+    {
+        _messageSplitterService = messageSplitterService;
+        _textSpeakReplacer = textSpeakReplacer;
+    }
     
     public (string, string) Process(string header, string body)
     {
