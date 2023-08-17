@@ -2,6 +2,7 @@ using System;
 using Moq;
 using nbm_message_processing.Business_Logic.Message_Processors;
 using Xunit;
+using Assert = Xunit.Assert;
 
 namespace nbm_message_processing.Tests;
 

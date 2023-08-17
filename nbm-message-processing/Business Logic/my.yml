@@ -2,8 +2,8 @@
 _messages:
   - _messageType: Tweet
     _messageText: 'Some message text LMAO <Laughing my a** off> this is a tweet @LewisYaMadman #crazy'
-  - _messageType: Tweet
-    _messageText: 'Some message text LMAO <Laughing my a** off> this is a tweet @LewisYaMadman #crazy'
+  - _messageType: Text
+    _messageText: ''
   - _messageType: Email
     _messageText: 98-76-54 Theft Some message text LMAO <URL Quarantined>
 _sirDtos:
